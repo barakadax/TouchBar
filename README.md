@@ -2,11 +2,11 @@
 
 Keyboard extension side project
 
-enable-linux-desktop: true
-enable-web: false
-enable-macos-desktop: true
-enable-windows-desktop: true
-enable-android: false
-enable-ios: false
-enable-fuchsia: false (Unavailable)
-enable-custom-devices: true
+enable-linux-desktop: true<br>
+enable-web: false<br>
+enable-macos-desktop: true<br>
+enable-windows-desktop: true<br>
+enable-android: false<br>
+enable-ios: false<br>
+enable-fuchsia: false (Unavailable)<br>
+enable-custom-devices: true<br>
