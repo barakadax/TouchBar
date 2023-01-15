@@ -36,35 +36,29 @@ class KeyboardUi extends State<HomePage> {
             10,
             (e) => InkWell(
               child: Container(
-                width: 200,
                 height: 100,
                 margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
-                padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                padding: const EdgeInsets.fromLTRB(12, 5, 12, 5),
                 decoration: BoxDecoration(
+                  color: const Color(0xff202020),
                   border: Border.all(
                     color: const Color(0xffffffff),
                   ),
-                  color: const Color(0xff202020),
                 ),
-                child: Center(
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Image.asset(
-                          "icons/chrome.png",
+                child: Row(
+                  children: <Widget>[
+                    Image.asset("icons/chrome.png"),
+                    const FittedBox(
+                      fit: BoxFit.fitHeight, // doesn't work
+                      child: Text(
+                        "chrome",
+                        maxLines: 1,
+                        style: TextStyle(
+                          color: Color(0xffF2F2F2),
                         ),
                       ),
-                      const Expanded(
-                        child: Text(
-                          "chrome",
-                          style: TextStyle(
-                            color: Color(0xffF2F2F2),
-                          ),
-                          maxLines: 1,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               onTap: () async {
