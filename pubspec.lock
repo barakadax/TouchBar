@@ -9,14 +9,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.10.0"
-  auto_direction:
-    dependency: "direct main"
-    description:
-      name: auto_direction
-      sha256: "5486041d6fae1cd9ca431217a3fa4699f9237a4218d295b421d384d9710f2ad4"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.6"
   boolean_selector:
     dependency: transitive
     description:
@@ -91,14 +83,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  intl:
-    dependency: transitive
-    description:
-      name: intl
-      sha256: "910f85bce16fb5c6f614e117efa303e85a1731bb0081edf3604a2ae6e9a3cc91"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.17.0"
   js:
     dependency: transitive
     description:
@@ -163,6 +147,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
+  screen_retriever:
+    dependency: transitive
+    description:
+      name: screen_retriever
+      sha256: "9c3839c4eb80807cd8210afa3c84a177ba00aef9f9b7b74ad92d3a0ab1d7e7ed"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.5"
   shell:
     dependency: "direct main"
     description:
@@ -232,5 +224,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  window_manager:
+    dependency: "direct main"
+    description:
+      name: window_manager
+      sha256: "5bdd29dc5f1f3185fc90696373a571d77968e03e5e820fb1ecdbdade3f5d8fff"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.0"
 sdks:
   dart: ">=2.19.0-444.2.beta <4.0.0"
+  flutter: ">=1.20.0"

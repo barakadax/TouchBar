@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shell/shell.dart';
+import 'package:window_manager/window_manager.dart';
 
-void main() => runApp(const MyApp());
+void main() async {
+  runApp(const MyApp());
+  windowManager.waitUntilReadyToShow().then((_) async {
+    await windowManager.setAsFrameless();
+  });
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -21,9 +27,13 @@ class HomePage extends StatefulWidget {
   KeyboardUi createState() => KeyboardUi();
 }
 
+// todo
+// add idle animation and on press stop and return for buttons screen
+// create more type of buttons (shutdown, volume control, brightness control, hdr)
+// get and load icons for buttons in runtime
+// read type of buttons, icon, text, icon+text from json
+// create asymmetry public key to crypt json from other device and use only here per each json change
 class KeyboardUi extends State<HomePage> {
-  var command = Shell();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,11 +46,13 @@ class KeyboardUi extends State<HomePage> {
             10,
             (e) => InkWell(
               child: Container(
-                height: 100,
-                margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+                margin: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                 padding: const EdgeInsets.fromLTRB(12, 5, 12, 5),
                 decoration: BoxDecoration(
                   color: const Color(0xff202020),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(10),
+                  ),
                   border: Border.all(
                     color: const Color(0xffffffff),
                   ),
@@ -48,22 +60,26 @@ class KeyboardUi extends State<HomePage> {
                 child: Row(
                   children: <Widget>[
                     Image.asset("icons/chrome.png"),
-                    const FittedBox(
-                      fit: BoxFit.fitHeight, // doesn't work
-                      child: Text(
-                        "chrome",
-                        maxLines: 1,
-                        style: TextStyle(
-                          color: Color(0xffF2F2F2),
-                        ),
+                    const SizedBox(width: 5),
+                    Text(
+                      "chrome $e", // create text in var and substring to 15 c
+                      maxLines: 1,
+                      style: const TextStyle(
+                        color: Color(0xffF2F2F2),
+                        fontSize: 25,
                       ),
+                      textAlign: TextAlign.left,
                     ),
                   ],
                 ),
               ),
               onTap: () async {
+                // add press animation
+                var command = Shell();
                 await command.run("/usr/bin/google-chrome");
               },
+              onHover: (isHovering) async {}, // add hover animation
+              onLongPress: () async {}, // change order of elements
             ),
           ),
         ),
