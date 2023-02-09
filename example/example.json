@@ -1,0 +1,62 @@
+[
+  {
+    "text": "chrome",
+    "type": "cli_button",
+    "icon": "icons/chrome.png",
+    "command": "/usr/bin/google-chrome"
+  },
+  {
+    "text": "apt update",
+    "type": "os_command",
+    "icon": null,
+    "command": "sudo apt update"
+  },
+  {
+    "text": "apt upgrade",
+    "type": "os_command",
+    "icon": null,
+    "command": "sudo apt upgrade"
+  },
+  {
+    "text": "apt-get update",
+    "type": "os_command",
+    "icon": null,
+    "command": "sudo apt-get update"
+  },
+  {
+    "text": "apt-get upgrade",
+    "type": "os_command",
+    "icon": null,
+    "command": "sudo apt-get upgrade"
+  },
+  {
+    "text": "mute",
+    "type": "os_command",
+    "icon": null,
+    "command": "amixer -D pulse sset Master 0%"
+  },
+  {
+    "text": "volume+1",
+    "type": "os_command",
+    "icon": null,
+    "command": "amixer -D pulse sset Master 1%+"
+  },
+  {
+    "text": "volume-1",
+    "type": "os_command",
+    "icon": null,
+    "command": "amixer -D pulse sset Master 1%-"
+  },
+  {
+    "text": "shutdown",
+    "type": "os_command",
+    "icon": null,
+    "command": "sudo poweroff"
+  },
+  {
+    "text": "reboot",
+    "type": "os_command",
+    "icon": null,
+    "command": "sudo reboot"
+  }
+]
