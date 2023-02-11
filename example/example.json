@@ -1,62 +1,45 @@
 [
   {
     "text": "chrome",
-    "type": "cli_button",
     "icon": "icons/chrome.png",
-    "command": "/usr/bin/google-chrome"
+    "order": true
   },
   {
-    "text": "apt update",
-    "type": "os_command",
-    "icon": null,
-    "command": "sudo apt update"
+    "text": "chrome",
+    "icon": "icons/chrome.png",
+    "order": false
   },
   {
-    "text": "apt upgrade",
-    "type": "os_command",
-    "icon": null,
-    "command": "sudo apt upgrade"
+    "text": "Hunk"
   },
   {
-    "text": "apt-get update",
-    "type": "os_command",
-    "icon": null,
-    "command": "sudo apt-get update"
+    "icon": "icons/chrome.png"
   },
   {
-    "text": "apt-get upgrade",
-    "type": "os_command",
-    "icon": null,
-    "command": "sudo apt-get upgrade"
+    "type": "mute_microphone"
   },
   {
-    "text": "mute",
-    "type": "os_command",
-    "icon": null,
-    "command": "amixer -D pulse sset Master 0%"
+    "type": "mute_speaker"
   },
   {
-    "text": "volume+1",
-    "type": "os_command",
-    "icon": null,
-    "command": "amixer -D pulse sset Master 1%+"
+    "type": "volume"
   },
   {
-    "text": "volume-1",
-    "type": "os_command",
-    "icon": null,
-    "command": "amixer -D pulse sset Master 1%-"
+    "type": "shutdown"
   },
   {
-    "text": "shutdown",
-    "type": "os_command",
-    "icon": null,
-    "command": "sudo poweroff"
+    "type": "reboot"
   },
   {
-    "text": "reboot",
-    "type": "os_command",
-    "icon": null,
-    "command": "sudo reboot"
+    "type": "sleep"
+  },
+  {
+    "type": "idle"
+  },
+  {
+    "type": "lock"
+  },
+  {
+    "type": "settings"
   }
 ]

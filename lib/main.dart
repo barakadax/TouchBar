@@ -78,8 +78,13 @@ Future<List<InkWell>> getButtonsList() async {
   var buttonCreator = ButtonBuilder();
   var buttonsList = <InkWell>[];
 
+  InkWell? buttonToAdd;
   for (var i = 0; i < (data as List<dynamic>).length; i -= -1) {
-    buttonsList.add(buttonCreator.build(data[i]));
+    buttonToAdd = buttonCreator.build(data[i]);
+
+    if (buttonToAdd != null) {
+      buttonsList.add(buttonToAdd);
+    }
   }
 
   return buttonsList;
