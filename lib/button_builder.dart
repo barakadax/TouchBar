@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'microphone_button.dart';
+import 'speaker_button.dart';
+
 class ButtonBuilder {
   var defaultMargin = const EdgeInsets.fromLTRB(5, 0, 5, 0);
   var defaultPadding = const EdgeInsets.fromLTRB(12, 5, 12, 5);
@@ -12,8 +15,16 @@ class ButtonBuilder {
   InkWell? build(dynamic buttonData) {
     List<Widget>? buttonContent;
 
+    if (buttonData["command"] == null) {
+      return null;
+    }
+
     if (buttonData["text"] != null || buttonData["icon"] != null) {
-      buttonContent = getCostumeButton(buttonData);
+      buttonContent = getButtonFront(buttonData);
+    } else if (buttonData["type"] == "microphone") {
+      buttonContent = getMicrophoneButton();
+    } else if (buttonData["type"] == "speaker") {
+      buttonContent = getSpeakerButton();
     } else {
       return null;
     }
@@ -31,7 +42,7 @@ class ButtonBuilder {
     );
   }
 
-  List<Widget> getCostumeButton(dynamic buttonData) {
+  List<Widget> getButtonFront(dynamic buttonData) {
     var widgets = <Widget>[];
 
     if (buttonData["text"] != null) {
@@ -54,10 +65,18 @@ class ButtonBuilder {
       widgets.add(Image.asset("icons/chrome.png"));
     }
 
-    if (buttonData["order"] != null && buttonData["order"]) {
+    if (buttonData["flipped"] != null && buttonData["flipped"]) {
       return widgets.reversed.toList();
     }
 
     return widgets;
+  }
+
+  List<Widget> getMicrophoneButton() {
+    return <Widget>[const MicrophoneButton()];
+  }
+
+  List<Widget> getSpeakerButton() {
+    return <Widget>[const SpeakerButton()];
   }
 }

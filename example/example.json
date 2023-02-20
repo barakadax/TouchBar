@@ -2,44 +2,56 @@
   {
     "text": "chrome",
     "icon": "icons/chrome.png",
-    "order": true
+    "flipped": true,
+    "command": "CHROME"
   },
   {
     "text": "chrome",
     "icon": "icons/chrome.png",
-    "order": false
+    "command": "CHROME"
   },
   {
-    "text": "Hunk"
+    "text": "Hunk",
+    "command": "HUNK"
   },
   {
-    "icon": "icons/chrome.png"
+    "icon": "icons/chrome.png",
+    "command": "CHROME"
   },
   {
-    "type": "mute_microphone"
+    "type": "microphone",
+    "command": "MICROPHONE"
   },
   {
-    "type": "mute_speaker"
+    "type": "speaker",
+    "command": "SPEAKERS"
   },
   {
-    "type": "volume"
+    "type": "volume",
+    "command": "VOLUME"
   },
   {
-    "type": "shutdown"
+    "type": "shutdown",
+    "command": "SHUTDOWN"
   },
   {
-    "type": "reboot"
+    "type": "reboot",
+    "command": "REBOOT"
   },
   {
-    "type": "sleep"
+    "type": "sleep",
+    "command": "SLEEP"
   },
   {
-    "type": "idle"
+    "type": "idle",
+    "command": "IDLE"
   },
   {
-    "type": "lock"
+    "type": "lock",
+    "command": "LOCK"
   },
   {
-    "type": "settings"
+    "type": "settings",
+    "command": "SETTINGS"
   }
 ]
